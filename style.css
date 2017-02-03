@@ -14,7 +14,7 @@ html {
 	width: 400px;
 	margin: 50px auto;
 	padding: 20px;
-	background: white;
+	background-color: rgba(255, 255, 255, 0.8);
 	-moz-box-shadow: 0 0 20px black;
 	-webkit-box-shadow: 0 0 20px black;
 	box-shadow: 0 0 20px black;
