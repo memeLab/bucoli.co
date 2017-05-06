@@ -3,8 +3,8 @@
 	padding: 0;
 }
 
-html { 
-	background: url(pictures/DSC_0708.JPG) no-repeat center center fixed;
+.randbg { 
+	background: url(pictures/IMG_20160607_151131532.jpg) no-repeat center center fixed;
 	background-size: cover;
 	height:100%;
 	min-height:100%;
@@ -24,4 +24,35 @@ p {
 	font: 15px/2 Georgia, Sans;
 	margin: 0 0 30px 0;
 	text-indent: 0px;
+}
+
+.randbg.bg1 {
+background-image: url('../pictures/1.jpg');
+}
+.randbg.bg2 {
+background-image: url('../pictures/2.jpg');
+}
+.randbg.bg3 {
+background-image: url('../pictures/3.jpg');
+}
+.randbg.bg4 {
+background-image: url('../pictures/4.jpg');
+}
+.randbg.bg5 {
+background-image: url('../pictures/5.jpg');
+}
+.randbg.bg6 {
+background-image: url('../pictures/6.jpg');
+}
+.randbg.bg7 {
+background-image: url('../pictures/7.jpg');
+}
+.randbg.bg8 {
+background-image: url('../pictures/8.jpg');
+}
+.randbg.bg9 {
+background-image: url('../pictures/9.jpg');
+}
+.randbg.bg0 {
+background-image: url('../pictures/0.jpg');
 }
