@@ -25,13 +25,16 @@ html#about {
 	margin: 50px auto;
 	padding: 20px;
 	background-color: rgba(220, 220, 220, 0.8);
-	box-shadow: 0 0 20px black;
+	box-shadow: 0 0 20px rgba(30,30,30,0.3);
 }
 
 p {
-	font-size: 15px/2;
-	margin: 0 0 30px 0;
+	margin: 0 0 3rem 0;
+	font-size: 1.5rem;
 	text-indent: 0px;
+}
+p:last-child {
+	margin: 0;
 }
 
 #footer {
