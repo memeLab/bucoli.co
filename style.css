@@ -8,20 +8,55 @@ html {
 	background-size: cover;
 	height:100%;
 	min-height:100%;
+	font-family: 'THSarabunNewRegular', Sans;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 10px;
+}
+html#main {
+	color: rgba(255,255,255,0.3);
+}
+html#about {
+	color: rgb(30,30,30);
 }
 		
 #page-wrap {
 	width: 400px;
 	margin: 50px auto;
 	padding: 20px;
-	background-color: rgba(255, 255, 255, 0.8);
-	-moz-box-shadow: 0 0 20px black;
-	-webkit-box-shadow: 0 0 20px black;
-	box-shadow: 0 0 20px black;
+	background-color: rgba(220, 220, 220, 0.8);
+	box-shadow: 0 0 20px rgba(30,30,30,0.3);
 }
 
 p {
-	font: 15px/2 Georgia, Sans;
-	margin: 0 0 30px 0;
+	margin: 0 0 3rem 0;
+	font-size: 1.5rem;
 	text-indent: 0px;
+}
+p:last-child {
+	margin: 0;
+}
+
+#footer {
+  position: fixed;
+  display: flex;
+  bottom: 0;
+  right: 0;
+  padding: 0.5rem 2rem;
+  font-size: 3rem;
+}
+
+#footer a {
+  padding: 0.5rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+#footer a {
+  padding: 0 1rem;
+  transition: color 0.5s ease;
+}
+
+#footer a:hover {
+  color: rgb(221, 221, 221);
 }
