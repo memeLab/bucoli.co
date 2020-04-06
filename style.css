@@ -4,7 +4,7 @@
 }
 
 html {
-	background: url(pictures/BUCOLICO_09.jpg) no-repeat center center fixed;
+	background: url(pictures/BUCOLICO_01.jpg) no-repeat center center fixed;
 	background-size: cover;
 	height:100%;
 	min-height:100%;
@@ -14,7 +14,7 @@ html {
 	font-size: 10px;
 }
 html#main {
-	color: rgba(255,255,255,0.3);
+	color: rgba(255,255,255,0.4);
 }
 html#about {
 	color: rgb(30,30,30);
@@ -24,14 +24,16 @@ html#about {
 	width: 400px;
 	margin: 50px auto;
 	padding: 20px;
+	font-size: 2rem;
+	line-height: 2rem;
 	background-color: rgba(220, 220, 220, 0.8);
 	box-shadow: 0 0 20px rgba(30,30,30,0.3);
 }
 
 p {
-	margin: 0 0 3rem 0;
-	font-size: 1.5rem;
-	text-indent: 0px;
+	margin: 0 0 2rem 0;
+	/* font-size: 1.5rem; */
+	text-indent: 0rem;
 }
 p:last-child {
 	margin: 0;
@@ -43,20 +45,34 @@ p:last-child {
   bottom: 0;
   right: 0;
   padding: 0.5rem 2rem;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
+
 #footer a {
-  padding: 0.5rem;
-  color: inherit;
+	padding: 0 1rem;
   text-decoration: none;
+  transition: color,font-size 0.5s,0.8s ease;
+	/* transition: font-size 0.8s ease; */
 }
 
-#footer a {
-  padding: 0 1rem;
-  transition: color 0.5s ease;
+#footer:hover {
+	font-size: 3rem;
 }
 
-#footer a:hover {
-  color: rgb(221, 221, 221);
+#footer.dark a {
+	color: inherit;
+}
+
+#footer.dark a:hover {
+  color: rgb(240, 240, 240);
+}
+
+#footer.light a {
+	color: rgb(40,40,40);
+	font-weight: 900;
+}
+
+#footer.light a:hover {
+  color: rgb(10, 10, 10);
 }
