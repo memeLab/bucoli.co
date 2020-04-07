@@ -21,12 +21,12 @@ html#about {
 }
 
 #page-wrap {
-	width: 400px;
-	margin: 50px auto;
-	padding: 20px;
-	font-size: 2rem;
-	line-height: 2rem;
-	background-color: rgba(220, 220, 220, 0.8);
+	width: 40rem;
+	margin: 2.5rem auto;
+	padding: 2rem;
+	font-size: 2.2rem;
+	line-height: 2.2rem;
+	background-color: rgba(215, 215, 215, 0.9);
 	box-shadow: 0 0 20px rgba(30,30,30,0.3);
 }
 
@@ -36,7 +36,11 @@ p {
 	text-indent: 0rem;
 }
 p:last-child {
-	margin: 0;
+	margin-bottom: 0;
+}
+
+.credits {
+	margin: 0.8rem 0;
 }
 
 #footer {
