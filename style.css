@@ -4,7 +4,7 @@
 }
 
 html {
-	background: url(pictures/BUCOLICO_01.jpg) no-repeat center center fixed;
+	background: url(pictures/BUCOLICO_01.jpg?v=2) no-repeat center center fixed;
 	background-size: cover;
 	height:100%;
 	min-height:100%;
