@@ -43,6 +43,20 @@ p:last-child {
 	margin: 0.8rem 0;
 }
 
+.icon.back.arrow {
+	position: absolute;
+	bottom: 1em;
+	right: 1em;
+	width: 0.8em;
+	opacity: 0.4;
+	transform: rotateY(180deg);
+}
+
+#page-wrap>a {
+	display: block;
+	position: relative;
+}
+
 #footer {
   position: fixed;
   display: flex;
