@@ -1,20 +1,26 @@
-
-SHORT TERM
+BACKLOG
+* Clean code
+* Feedback
 * Include menu
 * Improve menu viewing
-* Clean code
+
+
+++++++++++
+SHORT TERM
 * CI/CD
-* Feedback
 * Photos' archive
+
 
 ++++++++++++
 MEDIUM TERM
+* A/B testing
 * System to publish photos
 * System to receive photos
-* A/B testing
 
 
 ++++++++++
 LONG TERM
 * Create a video version
 * Create a 360° version
+
+
