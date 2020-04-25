@@ -116,7 +116,7 @@ p:last-child {
   transition: 0.2s ease-in-out;
   width: 6em;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	opacity: 0.7;
+	opacity: 0.5;
 }
 .menu.open {
 	opacity: 1;
@@ -127,7 +127,7 @@ p:last-child {
 	width: 4em;
 	height: 0.8em;
 	left: 1.6em;
-  background: #828282bf;
+  background: #fff;
   border-radius: 2em;
 	-webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -156,7 +156,7 @@ p:last-child {
 
 .menu:before {
 	display: block;
-	background-color: rgba(128, 128, 128, 0.36);
+	background-color: rgba(128, 128, 128);
 	width: 120%;
 	height: 120%;
 	content: '';
