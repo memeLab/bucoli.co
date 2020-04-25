@@ -61,6 +61,7 @@ p:last-child {
 	bottom: 1em;
 	right: 1em;
 	width: 0.8em;
+	font-size: 20px;
 	opacity: 0.4;
 	transform: rotateY(180deg);
 }
