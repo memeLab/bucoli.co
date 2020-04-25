@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" type="text/css" href="style.css?ver=3">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+  <script src="jquery-3.5.0.min.js"></script>
 	<title>Sobre bucoli.co</title>
 
   <!-- UserReport Global Tag -->
@@ -22,6 +23,21 @@
   </script>
 </head>
 <body>
+  <div id="thecanvas"></div>
+<div id="footer" class="light">
+  <nav id="themenu">
+    <a href="https://feedback.userreport.com/8a46b23d-a6fe-4f38-8d4d-0c4affb1b1ec/" onclick="event.preventDefault(); _urq.push(['Feedback_Open'])">feedback</a>
+    <a id="about" href="index.htm">iníco</a>
+  </nav>
+  <section>
+    <div class="icon menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </section>
+</div>
+
 <div id="page-wrap">
 	<p>A poluição visual degrada os centros urbanos pela não coerência com a fachada das edificações, pela falta de harmonia de anúncios, logotipos e propagandas que concorrem pela atenção do espectador. Alguns psicólogos também afirmam que os prejuízos atingem a saúde mental dos cidadãos, na medida em que sobrecarrega o indivíduo de informações desnecessárias.</p>
 	<p>O Arcadismo, escola literária que surgiu na Europa no século XVIII, tem como principal característica a exaltação da natureza. Adicionalmente, os árcades cultuavam o mito do homem natural em oposição ao homem corrompido pela sociedade, conceito originalmente expresso por Jean-Jacques Rousseau, na figura do “bom selvagem”.</p>
@@ -30,9 +46,14 @@
 	<p>Fugere urbem!</p>
 	<p class="credits">Bruna, Joshu, Tiago, Vanessa e pixel</p>
 	<p class="credits">Foto: <a id="author" target="_blank" href="https://www.instagram.com/bru.quevedo/">Bruna Quevedo</a></p>
-  <a href="javascript:history.back()"><svg class="icon back arrow" xmlns="http://www.w3.org/2000/svg" width="23" height="28" viewBox="0 0 23 28" aria-hidden="true">
-    <path d="M23 15a2.01 2.01 0 0 1-.578 1.422L12.25 26.594c-.375.359-.891.578-1.422.578s-1.031-.219-1.406-.578L8.25 25.422c-.375-.375-.594-.891-.594-1.422s.219-1.047.594-1.422L12.828 18h-11C.703 18 0 17.062 0 16v-2c0-1.062.703-2 1.828-2h11L8.25 7.406a1.96 1.96 0 0 1 0-2.812l1.172-1.172c.375-.375.875-.594 1.406-.594s1.047.219 1.422.594l10.172 10.172c.375.359.578.875.578 1.406z"></path>
-  </svg></a>
 </div>
+
+<script>
+$(".icon").on("click", function () {
+  $(this).toggleClass("open");
+  $("#themenu").toggleClass("show");
+  $("#thecanvas").toggleClass("show");
+});
+</script>
 </body>
 </html>
