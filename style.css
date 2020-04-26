@@ -19,7 +19,7 @@ html#main { color: rgba(255,255,255,0.4); }
 #thecanvas {
 display: block;
 position: fixed;
-z-index: -1;
+/* z-index: -1; */
 width: 100vw;
 height: 100vh;
 top: 0;
@@ -45,6 +45,16 @@ section { margin: 0 auto; }
 	line-height: 2.6rem;
 	background-color: rgba(215, 215, 215, 0.9);
 	box-shadow: 0 0 20px rgba(30,30,30,0.3);
+}
+
+@media (width <= 640px) {
+	html { touch-action: pan-x; }
+	#page-wrap {
+		width: 70vw;
+		font-size: 1.5rem;
+		line-height: 2.5rem;
+	}
+	p { margin-bottom: 1.4rem; }
 }
 
 p {
@@ -118,7 +128,7 @@ p:last-child {
   transition: 0.2s ease-in-out;
   width: 6em;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	opacity: 0.5;
+	opacity: 0.6;
 }
 .menu.open {
 	opacity: 1;
