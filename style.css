@@ -48,7 +48,6 @@ section { margin: 0 auto; }
 }
 
 @media (width <= 640px) {
-	html { touch-action: pan-x; }
 	#page-wrap {
 		width: 70vw;
 		font-size: 1.5rem;
