@@ -37,38 +37,32 @@ html#about { color: rgb(30,30,30); }
 
 section { margin: 0 auto; }
 
-#texto-sobre-original {
-	width: 50rem;
-	margin: 2.5rem auto;
-	padding: 2rem;
-	font-size: 1.7rem;
-	line-height: 2.6rem;
-	background-color: rgba(215, 215, 215, 0.9);
-	box-shadow: 0 0 20px rgba(30,30,30,0.3);
-	opacity: 0;
-	transition: opacity 1s ease;
-
-}
-
 #texto-sobre {
 	position: absolute;
-	width: 50vw;
-	height: 70vh;
+	width: 40vw;
+	height: 20em;
 	max-height: 80vh;
 	left: 50%;
 	top: 50%;
-	margin-top: -35vh;
-	margin-left: -25vw;
+	margin-top: -10em;
+	margin-left: -20vw;
 	padding: 2rem;
 	font-size: 1.7rem;
 	line-height: 2.6rem;
 	clear: left;
 	color: #fff;
-	overflow-y: scroll;
+	/* overflow-y: scroll; */
 	opacity: 0;
 	transition: opacity 1s ease;
 }
-
+#texto-sobre a {
+	color: #fff;
+	border: 1px dashed #ffffff55;
+	padding: 1px;
+	text-decoration: none;
+	transition: border-color 1s ease;
+}
+#texto-sobre a:hover { border-color: #fff; }
 
 @media (width <= 640px) {
 	#texto-sobre {
@@ -101,15 +95,6 @@ p:last-child {
 	transform: rotateY(180deg);
 }
 
-#texto-sobre a {
-	/* display: block; */
-	/* position: relative; */
-	color: #fff;
-	border-style: dashed;
-	border-width: 1px;
-	padding: 1px;
-	text-decoration: none;
-}
 
 #footer {
   position: fixed;
