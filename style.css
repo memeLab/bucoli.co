@@ -54,6 +54,8 @@ section { margin: 0 auto; }
 	/* overflow-y: scroll; */
 	opacity: 0;
 	transition: opacity 1s ease;
+	font-family: Arial, sans-serif;
+	font-weight: normal;
 }
 #texto-sobre a {
 	color: #fff;
