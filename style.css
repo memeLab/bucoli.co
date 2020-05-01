@@ -67,7 +67,7 @@ div.section { margin: 0 auto; }
 #texto-sobre a:hover { border-color: #fff; }
 
 @media (width <= 640px) {
-	#texto-sobre {
+	body>#texto-sobre {
 		top: 0;
 		left: 0;
 		margin-top: 0;
@@ -89,7 +89,7 @@ div.section { margin: 0 auto; }
 		margin: unset;
 		clear: unset;
 	}
-	#footer a { padding: 1rem; }
+	body>#footer a { padding: 1rem; }
 }
 
 p {
