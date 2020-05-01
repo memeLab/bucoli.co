@@ -68,7 +68,15 @@ div.section { margin: 0 auto; }
 
 @media (width <= 640px) {
 	#texto-sobre {
-		width: 70vw;
+		top: 0;
+		left: 0;
+		margin-top: 0;
+		margin-left: 0;
+		clear: unset;
+		max-width: 600px;
+		max-width: 600px;
+		width: 95vw;
+		height: 80vh;
 		font-size: 1.5rem;
 		line-height: 2.5rem;
 	}
