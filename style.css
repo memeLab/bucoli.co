@@ -76,7 +76,7 @@ div.section { margin: 0 auto; }
 		max-width: 600px;
 		max-width: 600px;
 		width: 95vw;
-		height: 80vh;
+		/* height: 80vh; */
 		font-size: 1.5rem;
 		line-height: 2.5rem;
 	}
@@ -89,6 +89,7 @@ div.section { margin: 0 auto; }
 		margin: unset;
 		clear: unset;
 	}
+	#footer a { padding: 1rem; }
 }
 
 p {
