@@ -81,7 +81,7 @@ div.section { margin: 0 auto; }
 		line-height: 2.5rem;
 	}
 	p { margin-bottom: 1.4rem; }
-	#mc_embed_signup {
+	body>#mc_embed_signup {
 		position: fixed;
 		width: 100vw;
 		top: unset;
