@@ -35,7 +35,7 @@ transition: opacity 1s ease;
 
 html#about { color: rgb(30,30,30); }
 
-section { margin: 0 auto; }
+div.section { margin: 0 auto; }
 
 #texto-sobre {
 	position: absolute;
