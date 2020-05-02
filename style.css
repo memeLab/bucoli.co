@@ -5,16 +5,19 @@
 }
 
 html {
-	background: url(pictures/BUCOLICO_004.jpg?v=1) no-repeat center center fixed;
-	background-size: cover;
-	height:100%;
-	min-height:100%;
-  font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: normal;
 	font-style: normal;
 	font-size: 10px;
 }
 html#main { color: rgba(255,255,255,0.4); }
+
+body {
+	background: url(pictures/BUCOLICO_02.jpg?v=1) no-repeat center center fixed;
+	background-size: cover;
+	height:100%;
+	min-height:100%;
+}
 
 #thecanvas {
 display: block;
