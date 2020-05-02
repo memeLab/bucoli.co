@@ -33,25 +33,28 @@
 
   switch(Number(urlParams.get('id'))) { // get the 'id' and convert to number
     case 1:
-      image = "BUCOLICO_001"; // email from Mar 26th
+      image = "BUCOLICO_001"; // from 2018
       break;
     case 2:
-      image = "BUCOLICO_002";  // email from Mar 27th
+      image = "BUCOLICO_002"; // email from Mar 26th
       break;
     case 3:
-      image = "BUCOLICO_003";  // email from Apr 6th
+      image = "BUCOLICO_003";  // email from Mar 27th
       break;
     case 4:
-      image = "BUCOLICO_004";  // email from Apr 18th
+      image = "BUCOLICO_004";  // email from Apr 6th
       break;
     case 5:
-      image = "BUCOLICO_005";  // email from Apr 27th
+      image = "BUCOLICO_005";  // email from Apr 18th
       break;
     case 6:
-      image = "BUCOLICO_006";  // email from May the 4th (be with you)
+      image = "BUCOLICO_006";  // email from Apr 27th
+      break;
+    case 7:
+      image = "BUCOLICO_007";  // email from May the 4th (be with you)
       break;
     default:
-      image = "BUCOLICO_005";  // last email - this needs to change just before the next one is sent 
+      image = "BUCOLICO_006";  // last email - this needs to change just before the next one is sent 
   } 
 
   document.body.style.backgroundImage = "url(pictures/"+image+".jpg)" ;
