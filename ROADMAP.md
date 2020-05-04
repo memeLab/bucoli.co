@@ -36,9 +36,9 @@ To build immersive environments that improve mental health.
 
 * Allow the community to submit content.
 
-### Later
-
 * Increase community engagement.
+
+### Later
 
 * Allow the community to experience audiovisual environments.
 
