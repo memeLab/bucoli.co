@@ -24,7 +24,42 @@
     gtag('config', 'UA-37240876-3', { 'optimize_id': 'GTM-WZHLZWH'});
   </script>
 </head>
+
 <body>
+
+<script>
+  const queryString = window.location.search; // get the complete query string
+  const urlParams = new URLSearchParams(queryString); // split the parameters
+
+  switch(Number(urlParams.get('id'))) { // get the 'id' and convert to number
+    case 1:
+      image = "2017-02-03-DSC_0708"; // from 2017
+      break;
+    case 2:
+      image = "BUCOLICO_009"; // email from Mar 26th
+      break;
+    case 3:
+      image = "BUCOLICO_001";  // email from Apr ??th (change in the 9th)
+      break;
+    case 4:
+      image = "BUCOLICO_002";  // email from Apr 18th
+      break;
+    case 5:
+      image = "BUCOLICO_003";  // email from Apr 27th
+      break;
+    case 6:
+      image = "BUCOLICO_004";  // email from May the 4th (be with you)
+      break;
+    default:
+      image = "BUCOLICO_004";  // last email - this needs to change just before the next one is sent
+  }
+
+  document.body.style.backgroundImage = "url(pictures/"+image+".jpg)" ;
+  console.log(queryString);
+  console.log(urlParams);
+  console.log(image);
+</script>
+
   <div id="thecanvas"></div>
 <div id="footer" class="light">
   <nav id="themenu">
