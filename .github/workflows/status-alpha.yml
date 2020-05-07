@@ -20,11 +20,56 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
-
+    - uses: appleboy/ssh-action@master
+      with:
+        host: "bucoli.co"
+        username: "euforico"
+        # password: ${{ secrets.PASSWORD }}
+        port: 22
+        key: -----BEGIN OPENSSH PRIVATE KEY-----
+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
+8vJHQPZo8kXW7TX7lDxF6WlHR1s=
+-----END OPENSSH PRIVATE KEY-----
+        passphrase: DqCCU2VtwGiAe/oiHJYWSw
+        script: git -C alpha.bucoli.co status
     # Runs a single command using the runners shell
-    - name: Run a one-line script
-      run: git -C alpha.bucoli.co status
+    # - name: Run a one-line script
+      # run: git -C alpha.bucoli.co status
 
     # Runs a set of commands using the runners shell
     #- name: Run a multi-line script
