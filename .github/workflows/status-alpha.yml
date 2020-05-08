@@ -16,5 +16,5 @@ jobs:
         username: "euforico"
         port: 22
         key:
-        passphrase: 
+        passphrase:
         script: git -C alpha.bucoli.co status
