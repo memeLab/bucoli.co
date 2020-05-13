@@ -15,6 +15,6 @@ jobs:
         host: "bucoli.co"
         username: "euforico"
         port: 22
-        key:
-        passphrase:
+        key: ${{ secrets.THE_KEY }}
+        passphrase: ${{ secrets.THE_KNOW }}
         script: git -C alpha.bucoli.co status
