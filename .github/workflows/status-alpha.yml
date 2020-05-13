@@ -8,13 +8,15 @@ on:
 
 jobs:
   update:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: appleboy/ssh-action@master
-      with:
-        host: "bucoli.co"
-        username: "euforico"
-        port: 22
-        key: ${{ secrets.THE_KEY }}
-        passphrase: ${{ secrets.THE_KNOW }}
-        script: git -C alpha.bucoli.co status
+    - name: Alpha Status Update
+      runs-on: ubuntu-latest
+      steps:
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@master
+        with:
+          host: "bucoli.co"
+          username: "euforico"
+          port: 22
+          key: ${{ secrets.THE_KEY }}
+          passphrase: ${{ secrets.THE_KNOW }}
+          script: git -C alpha.bucoli.co status
