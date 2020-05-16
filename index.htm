@@ -167,19 +167,67 @@ document.body.style.backgroundImage = "url(pictures/"+image+".jpg)" ;
 // select the image to show: END
 
 // to show or not the welcoming text: START
-if ( Number(urlParams.get('bvd')) != 1 ) {
-  // do nothing
-} else {
-  document.addEventListener('DOMContentLoaded', function() {
-    $(".icon").toggleClass("open");
-    $("#themenu").toggleClass("show");
-    $("#thecanvas").toggleClass("show");
-    $("#texto-apresentacao").toggleClass("show");
-    $("#mc_embed_signup").removeClass("show");
-    $("#texto-sobre").removeClass("show");
-  });
+
+function storageAvailable(type) {
+    var storage;
+    try {
+        storage = window[type];
+        var x = '__storage_test__';
+        storage.setItem(x, x);
+        storage.removeItem(x);
+        return true;
+    }
+    catch(e) {
+        return e instanceof DOMException && (
+            // everything except Firefox
+            e.code === 22 ||
+            // Firefox
+            e.code === 1014 ||
+            // test name field too, because code might not be present
+            // everything except Firefox
+            e.name === 'QuotaExceededError' ||
+            // Firefox
+            e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+            // acknowledge QuotaExceededError only if there's something already stored
+            (storage && storage.length !== 0);
+    }
 }
+
+if ( !Number(urlParams.get('bvd')) ) {
+  if (storageAvailable('localStorage')) { // testa possibilidade de localStorage
+    // Yippee! We can use localStorage awesomeness
+    if(!localStorage.getItem('firstvisit')) {
+      document.addEventListener('DOMContentLoaded', function() {
+        $(".icon").toggleClass("open");
+        $("#themenu").toggleClass("show");
+        $("#thecanvas").toggleClass("show");
+        $("#texto-apresentacao").toggleClass("show");
+        $("#mc_embed_signup").removeClass("show");
+        $("#texto-sobre").removeClass("show");
+      });
+    }
+  }
+
+} else {
+  if ( Number(urlParams.get('bvd')) != 1 ) {
+  } else {
+    document.addEventListener('DOMContentLoaded', function() {
+      $(".icon").toggleClass("open");
+      $("#themenu").toggleClass("show");
+      $("#thecanvas").toggleClass("show");
+      $("#texto-apresentacao").toggleClass("show");
+      $("#mc_embed_signup").removeClass("show");
+      $("#texto-sobre").removeClass("show");
+    });
+  }
+}
+localStorage.setItem('firstvisit', 1); // sempre marca como já visitado
+
 // to show or not the welcoming text: END
+
+
+
+
 </script>
 
 <script src='https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text'; /**
