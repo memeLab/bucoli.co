@@ -194,8 +194,8 @@ function storageAvailable(type) {
 }
 
 if ( !Number(urlParams.get('bvd')) ) {
-  if (storageAvailable('localStorage')) { // testa possibilidade de localStorage
-    // Yippee! We can use localStorage awesomeness
+  if (storageAvailable('localStorage')) {
+
     if(!localStorage.getItem('firstvisit')) {
       document.addEventListener('DOMContentLoaded', function() {
         $(".icon").toggleClass("open");
@@ -206,6 +206,7 @@ if ( !Number(urlParams.get('bvd')) ) {
         $("#texto-sobre").removeClass("show");
       });
     }
+
   }
 
 } else {
@@ -221,7 +222,7 @@ if ( !Number(urlParams.get('bvd')) ) {
     });
   }
 }
-localStorage.setItem('firstvisit', 1); // sempre marca como já visitado
+localStorage.setItem('firstvisit', 1);
 
 // to show or not the welcoming text: END
 
