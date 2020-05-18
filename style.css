@@ -40,7 +40,7 @@ html#about { color: rgb(30,30,30); }
 
 div.section { margin: 0 auto; }
 
-#texto-sobre {
+#texto-sobre, #texto-apresentacao {
 	position: absolute;
 	width: 40vw;
 	height: 20em;
@@ -60,17 +60,17 @@ div.section { margin: 0 auto; }
 	font-family: Arial, sans-serif;
 	font-weight: normal;
 }
-#texto-sobre a {
+#texto-sobre a, #texto-apresentacao a {
 	color: #fff;
 	border: 1px dashed #ffffff55;
 	padding: 1px;
 	text-decoration: none;
 	transition: border-color 1s ease;
 }
-#texto-sobre a:hover { border-color: #fff; }
+#texto-sobre a:hover, #texto-apresentacao a:hover { border-color: #fff; }
 
 @media (width <= 640px) {
-	body>#texto-sobre {
+	body>#texto-sobre, body>#texto-apresentacao {
 		top: 0;
 		left: 0;
 		margin-top: 0;
@@ -228,7 +228,7 @@ p:last-child {
 
 #themenu.show,
 #mc_embed_signup.show,
-#texto-sobre.show {
+#texto-sobre.show, #texto-apresentacao.show {
 	opacity: 1;
 }
 

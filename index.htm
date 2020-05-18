@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" type="text/css" href="style.css?ver=10">
+  <link rel="stylesheet" type="text/css" href="style.css?ver=11">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
   <link href="https://cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
   <title>Fugere urbem!</title>
 
-  <script src="jquery-3.5.0.min.js"></script>
+  <script src="jquery-3.5.1.min.js"></script>
 
   <!-- UserReport Global Tag -->
   <script src="https://sak.userreport.com/bucolico/launcher.js" async id="userreport-launcher-script"></script>
@@ -27,48 +27,13 @@
 
 <body>
 
-<script>
-  const queryString = window.location.search; // get the complete query string
-  const urlParams = new URLSearchParams(queryString); // split the parameters
-
-  switch(Number(urlParams.get('id'))) { // get the 'id' and convert to number
-    case 1:
-      image = "2017-02-03-DSC_0708"; // from 2017
-      break;
-    case 2:
-      image = "BUCOLICO_009"; // email from Mar 26th
-      break;
-    case 3:
-      image = "BUCOLICO_001";  // email from Apr ??th (change in the 9th)
-      break;
-    case 4:
-      image = "BUCOLICO_002";  // email from Apr 18th
-      break;
-    case 5:
-      image = "BUCOLICO_003";  // email from Apr 27th
-      break;
-    case 6:
-      image = "BUCOLICO_004";  // email from May the 4th (be with you)
-      break;
-    case 7:
-      image = "BUCOLICO_005";  // email from May the 4th (be with you)
-      break;
-    default:
-      image = "BUCOLICO_005";  // last email - this needs to change just before the next one is sent
-  }
-
-  document.body.style.backgroundImage = "url(pictures/"+image+".jpg)" ;
-  console.log(queryString);
-  console.log(urlParams);
-  console.log(image);
-</script>
-
   <div id="thecanvas"></div>
 <div id="footer" class="light">
   <nav id="themenu">
     <a class="link-assinar-mc">assinar</a>
     <a class="link-feedback" href="https://feedback.userreport.com/8a46b23d-a6fe-4f38-8d4d-0c4affb1b1ec/" onclick="event.preventDefault(); _urq.push(['Feedback_Open'])">feedback</a>
     <a class="link-texto-sobre">sobre</a>
+    <!-- <a class="link-texto-apresentacao">apresentação</a> -->
   </nav>
   <div class="section">
     <div class="icon menu">
@@ -85,6 +50,13 @@
 	<p><strong>Fugere urbem!</strong></p>
 	<p class="credits">Bruna, Tiago e pixel</p>
 	<p class="credits">Foto: <a id="author" target="_blank" href="https://www.instagram.com/bru.quevedo/">Bruna Quevedo</a></p>
+</div>
+
+<div id="texto-apresentacao">
+	<p>Bem vindo ao bucoli.co!</p>
+	<p>Experimente parar por alguns instantes e desacelerar o ritmo frenético ao qual o dia a dia e o excesso de informações te levam.</p>
+	<p>Aqui você verá uma bela imagem de paisagem e sua tela se transformará em um portal para um lugar prazeroso e tranquilo.<br>Contemple, explore, preste atenção aos detalhes. É um momento de quebra da rotina.</p>
+	<p>Assine (através do menu) nosso e-mail semanal para mergulhar nesta experiência e ser avisado quando houver uma nova imagem.</p>
 </div>
 
 <div id="mc_embed_signup">
@@ -118,25 +90,144 @@
 </div>
 
 <script>
+// Show and Hide elements: START
 $(".icon").on("click", function () {
   $(this).toggleClass("open");
   $("#themenu").toggleClass("show");
   $("#thecanvas").toggleClass("show");
   $("#mc_embed_signup").removeClass("show");
   $("#texto-sobre").removeClass("show");
+  $("#texto-apresentacao").removeClass("show");
+});
+$("#thecanvas").on("click", function () {
+  $(".icon").removeClass("open");
+  $("#themenu").removeClass("show");
+  $("#thecanvas").removeClass("show");
+  $("#mc_embed_signup").removeClass("show");
+  $("#texto-sobre").removeClass("show");
+  $("#texto-apresentacao").removeClass("show");
 });
 $(".link-assinar-mc").on("click", function () {
   $("#mc_embed_signup").toggleClass("show");
   $("#texto-sobre").removeClass("show");
+  $("#texto-apresentacao").removeClass("show");
 });
 $(".link-texto-sobre").on("click", function () {
   $("#texto-sobre").toggleClass("show");
   $("#mc_embed_signup").removeClass("show");
+  $("#texto-apresentacao").removeClass("show");
 });
-$(".link-feedback").on("click", function () {
+$(".link-texto-apresentacao").on("click", function () {
+  $("#texto-apresentacao").toggleClass("show");
   $("#texto-sobre").removeClass("show");
   $("#mc_embed_signup").removeClass("show");
 });
+$(".link-feedback").on("click", function () {
+  $("#texto-sobre").removeClass("show");
+  $("#texto-apresentacao").removeClass("show");
+  $("#mc_embed_signup").removeClass("show");
+});
+// Show and Hide elements: END
+
+// select the image to show: START
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+
+switch(Number(urlParams.get('id'))) {
+  case 1:
+    image = "2017-02-03-DSC_0708";
+    break;
+  case 2:
+    image = "BUCOLICO_009";
+    break;
+  case 3:
+    image = "BUCOLICO_001";
+    break;
+  case 4:
+    image = "BUCOLICO_002";
+    break;
+  case 5:
+    image = "BUCOLICO_003";
+    break;
+  case 6:
+    image = "BUCOLICO_004";
+    break;
+  case 7:
+    image = "BUCOLICO_005";
+    break;
+  case 8:
+    image = "BUCOLICO_006";
+    break;
+  default:
+    image = "BUCOLICO_006";
+}
+
+document.body.style.backgroundImage = "url(pictures/"+image+".jpg)" ;
+// select the image to show: END
+
+// to show or not the welcoming text: START
+
+function storageAvailable(type) {
+    var storage;
+    try {
+        storage = window[type];
+        var x = '__storage_test__';
+        storage.setItem(x, x);
+        storage.removeItem(x);
+        return true;
+    }
+    catch(e) {
+        return e instanceof DOMException && (
+            // everything except Firefox
+            e.code === 22 ||
+            // Firefox
+            e.code === 1014 ||
+            // test name field too, because code might not be present
+            // everything except Firefox
+            e.name === 'QuotaExceededError' ||
+            // Firefox
+            e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+            // acknowledge QuotaExceededError only if there's something already stored
+            (storage && storage.length !== 0);
+    }
+}
+
+if ( !Number(urlParams.get('bvd')) ) {
+  if (storageAvailable('localStorage')) {
+
+    if(!localStorage.getItem('firstvisit')) {
+      document.addEventListener('DOMContentLoaded', function() {
+        $(".icon").toggleClass("open");
+        $("#themenu").toggleClass("show");
+        $("#thecanvas").toggleClass("show");
+        $("#texto-apresentacao").toggleClass("show");
+        $("#mc_embed_signup").removeClass("show");
+        $("#texto-sobre").removeClass("show");
+      });
+    }
+
+  }
+
+} else {
+  if ( Number(urlParams.get('bvd')) != 1 ) {
+  } else {
+    document.addEventListener('DOMContentLoaded', function() {
+      $(".icon").toggleClass("open");
+      $("#themenu").toggleClass("show");
+      $("#thecanvas").toggleClass("show");
+      $("#texto-apresentacao").toggleClass("show");
+      $("#mc_embed_signup").removeClass("show");
+      $("#texto-sobre").removeClass("show");
+    });
+  }
+}
+localStorage.setItem('firstvisit', 1);
+
+// to show or not the welcoming text: END
+
+
+
+
 </script>
 
 <script src='https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text'; /**
