@@ -12,13 +12,6 @@ html {
 	color: rgba(255,255,255,0.4);
 }
 
-body {
-	background: url(pictures/BUCOLICO_07.jpg?v=1) no-repeat center center fixed;
-	background-size: cover;
-	height:100%;
-	min-height:100%;
-}
-
 
 #thecanvas {
 display: block;
@@ -27,6 +20,17 @@ width: 100vw;
 height: 100vh;
 top: 0;
 right: 0;
+background: url(pictures/BUCOLICO_007.jpg?v=1) no-repeat center center fixed; /* no-JS fallback */
+background-size: cover;
+}
+#thecanvas:after {
+display: block;
+position: fixed;
+width: 100vw;
+height: 100vh;
+top: 0;
+right: 0;
+content: '';
 background-color: #000000a0;
 opacity: 0;
 transition: opacity 1s ease;
@@ -92,7 +96,7 @@ transition: opacity 1s ease;
 	transition: opacity 1s ease;
 }
 
-#thecanvas.show,
+#thecanvas.show:after,
 #themenu.show,
 #texto-sobre.show,
 #texto-apresentacao.show,
