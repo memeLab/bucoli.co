@@ -7,7 +7,8 @@ on:
     branches: [ alpha ]
 
 jobs:
-  update1:
+  update:
+    name: Mostra o status do alpha
     runs-on: ubuntu-latest
     steps:
     - name: executing remote ssh commands using password
