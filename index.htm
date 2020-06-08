@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" type="text/css" href="style.css?ver=13">
+  <link rel="stylesheet" type="text/css" href="style.css?ver=14">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
   <link href="https://cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
   <title>Fugere urbem!</title>
@@ -20,9 +20,41 @@
     gtag('config', 'UA-37240876-3');
     gtag('config', 'UA-37240876-3', { 'optimize_id': 'GTM-WZHLZWH'});
   </script>
+
+  <script>
+  // select the image to show: START
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  theID = Number(urlParams.get('id'));
+
+  let everyPicture = [
+    {id:'1', name:'Bruna Quevedo', link:'https://www.instagram.com/bru.quevedo', imageName:'2017-02-03-DSC_0708'},
+    {id:'2', name:'Bruna Quevedo', link:'https://www.instagram.com/bru.quevedo', imageName:'BUCOLICO_009'},
+    {id:'3', name:'Bruna Quevedo', link:'https://www.instagram.com/bru.quevedo', imageName:'BUCOLICO_001'},
+    {id:'4', name:'Bruna Quevedo', link:'https://www.instagram.com/bru.quevedo', imageName:'BUCOLICO_002'},
+    {id:'5', name:'Bruna Quevedo', link:'https://www.instagram.com/bru.quevedo', imageName:'BUCOLICO_003'},
+    {id:'6', name:'Bruna Quevedo', link:'https://www.instagram.com/bru.quevedo', imageName:'BUCOLICO_004'},
+    {id:'7', name:'Bruna Quevedo', link:'https://www.instagram.com/bru.quevedo', imageName:'BUCOLICO_005'},
+    {id:'8', name:'Bruna Quevedo', link:'https://www.instagram.com/bru.quevedo', imageName:'BUCOLICO_006'},
+    {id:'9', name:'Bruna Quevedo', link:'https://www.instagram.com/bru.quevedo', imageName:'BUCOLICO_007'},
+    {id:'10', name:'Bruna Quevedo', link:'https://www.instagram.com/bru.quevedo', imageName:'BUCOLICO_008'},
+    {id:'11', name:'Rafa Munduruca', link:'https://www.instagram.com/munduruca/', imageName:'MUNDURUCA_001'}
+  ]
+
+  if (theID == '0' || theID == '' || theID == null) {
+    theID = everyPicture.length;
+  };
+
+  let thePicture = everyPicture.find(picture=> picture.id==theID);
+  // select the image to show: END
+  </script>
+
 </head>
 <body>
 <div id="thecanvas"></div>
+<script>
+  document.getElementById("thecanvas").style.backgroundImage = "url(pictures/"+thePicture['imageName']+".jpg)" ;
+</script>
 <div id="footer">
   <nav id="themenu">
     <a class="link-assinar-mc">assinar</a>
@@ -44,8 +76,14 @@
 	<p>A proposta de <strong>bucoli.co</strong> é aproveitar alguns instantes do enorme tempo que passamos olhando para telas para fugir da poluição visual urbana. A cada semana, há uma nova imagem de uma paisagem bucólica, de artistas que convidamos. É uma oportunidade de fugir um pouco do estresse do confinamento e <em>voltar às origens</em>.</p>
 	<p><strong>Fugere urbem!</strong></p>
 	<p class="credits">Bruna, Tiago e pixel</p>
-	<p class="credits">Foto: <a id="author" target="_blank" href="https://www.instagram.com/bru.quevedo/">Bruna Quevedo</a></p>
+  <p class="credits">Foto: <a id="author" target="_blank"></a></p>
 </div>
+
+<script>
+    var theAuthor = document.getElementById("author");
+    theAuthor.setAttribute("href", thePicture['link']);
+    theAuthor.innerHTML = thePicture['name'];
+</script>
 
 <div id="texto-apresentacao">
 	<p>Bem vindo ao bucoli.co!</p>
@@ -124,48 +162,6 @@ $(".link-feedback").on("click", function () {
 });
 // Show and Hide elements: END
 
-// select the image to show: START
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-
-switch(Number(urlParams.get('id'))) {
-  case 1:
-    image = "2017-02-03-DSC_0708";
-    break;
-  case 2:
-    image = "BUCOLICO_009";
-    break;
-  case 3:
-    image = "BUCOLICO_001";
-    break;
-  case 4:
-    image = "BUCOLICO_002";
-    break;
-  case 5:
-    image = "BUCOLICO_003";
-    break;
-  case 6:
-    image = "BUCOLICO_004";
-    break;
-  case 7:
-    image = "BUCOLICO_005";
-    break;
-  case 8:
-    image = "BUCOLICO_006";
-    break;
-  case 9:
-    image = "BUCOLICO_007";
-    break;
-  case 10:
-    image = "BUCOLICO_008";
-    break;
-  default:
-    image = "BUCOLICO_008";
-}
-
-document.getElementById("thecanvas").style.backgroundImage = "url(pictures/"+image+".jpg)" ;
-// select the image to show: END
-
 // to show or not the welcoming text: START
 
 function storageAvailable(type) {
@@ -225,8 +221,6 @@ if ( !Number(urlParams.get('bvd')) ) {
 localStorage.setItem('firstvisit', 1);
 
 // to show or not the welcoming text: END
-
-
 
 
 </script>
