@@ -39,12 +39,12 @@
     {id:'9', name:'Bruna Quevedo', link:'https://www.instagram.com/bru.quevedo', imageName:'BUCOLICO_007'},
     {id:'10', name:'Bruna Quevedo', link:'https://www.instagram.com/bru.quevedo', imageName:'BUCOLICO_008'},
     {id:'11', name:'Rafa Munduruca', link:'https://www.instagram.com/munduruca/', imageName:'MUNDURUCA_001'},
-    {id:'12', name:'Bruna Quevedo', link:'https://www.instagram.com/bru.quevedo', imageName:'BUCOLICO_011_v2'}
-    {id:'13', name:'Kitty Yoshioka', link:'https://www.instagram.com/kitty-cat', imageName:'KITTY_YOSHIOKA_001'}
-    // {id:'14', name:'Maisa Coutinho', link:'https://www.instagram.com/a-voz-de-maisa', imageName:'MAISA_COUTINHO_001'}
+    {id:'12', name:'Bruna Quevedo', link:'https://www.instagram.com/bru.quevedo', imageName:'BUCOLICO_011_v2'},
+    {id:'13', name:'Kitty Yoshioka', link:'https://www.instagram.com/kitty-cat', imageName:'KITTY_YOSHIOKA_001'},
+    {id:'14', name:'Maisa Coutinho', link:'https://www.instagram.com/a-voz-de-maisa', imageName:'MAISA_COUTINHO_001'}
   ]
   if (theID == '0' || theID == '' || theID == null) {
-    theID = everyPicture.length;
+    theID = everyPicture.length -1;
   };
 
   let thePicture = everyPicture.find(picture=> picture.id==theID);
